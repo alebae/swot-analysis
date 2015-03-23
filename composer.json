@@ -4,7 +4,8 @@
 	"require" : {
 		"php"  : ">=5.5.9",
 		"slim/slim" : "*",
-		"doctrine/orm": "*"
+		"doctrine/orm": "*",
+		"twig/twig": "*"
 	},
 	"require-dev" : {
 		"phpunit/phpunit": "*",
