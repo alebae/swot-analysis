@@ -1,0 +1,19 @@
+{
+	"name" :  "alebae/swot-analysis",
+	"description" : "Ferramenta exemplo para efetuar Análise SWOT",
+	"require" : {
+		"php"  : ">=5.5.9",
+		"slim/slim" : "*",
+		"doctrine/orm": "*"
+	},
+	"require-dev" : {
+		"phpunit/phpunit": "*",
+		"mockery/mockery": "dev-master@dev"
+	},
+	"minimum-stability": "dev",
+	"autoload": {
+		"psr-4": {
+			"SWOT\\": "src/Swot"			
+		}
+	}
+}
