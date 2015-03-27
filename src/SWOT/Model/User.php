@@ -7,81 +7,101 @@ use Doctrine\ORM\Mapping as ORM;
 */
 class User
 {
-	/**
-	* @Id
-	* @Column(type="integer", name="idUsuario")
-	* @GeneratedValue(strategy="AUTO")
-	* @var integer
-	*/
-	protected $id;
+    /**
+    * @Id
+    * @Column(type="integer", name="idUsuario")
+    * @GeneratedValue(strategy="AUTO")
+    * @var integer
+    */
+    protected $id;
 
-	/**
-	* @Column(type="string", name="nome", length=200)
-	* @var string
-	*/
-	protected $nome;
+    /**
+    * @Column(type="string", name="nome", length=200)
+    * @var string
+    */
+    protected $nome;
 
-	/**
-	* @Column(type="string", name="email", length=200)
-	* @var string
-	*/
-	protected $email;
+    /**
+    * @Column(type="string", name="email", length=200)
+    * @var string
+    */
+    protected $email;
 
-	/**
-	* @Column(type="string", name="login", length=50)
-	* @var string
-	*/
-	protected $login;
+    /**
+    * @Column(type="string", name="login", length=50)
+    * @var string
+    */
+    protected $login;
 
-	/**
-	* @Column(type="string", name="senha")
-	* @var string
-	*/
-	protected $senha;
+    /**
+    * @Column(type="string", name="senha")
+    * @var string
+    */
+    protected $senha;
 
-	public function getNome()
-	{
-		return $this->nome;
-	}
+     /**
+     * Get Nome
+     *
+     * @return string
+     */
+    public function getNome()
+    {
+	    return $this->nome;
+    }
 
-	public function setNome($nome)
-	{
-		$this->nome = $nome;
-	}
+    public function setNome($nome)
+    {
+	    $this->nome = $nome;
+    }
 
-	public function getEmail()
-	{
-		return $this->email;
-	}
+     /**
+     * Get Email
+     *
+     * @return string
+     */
+    public function getEmail()
+    {
+	    return $this->email;
+    }
 
-	public function setEmail($email)
-	{
-		if( !filter_var($email, FILTER_VALIDATE_EMAIL) ) {
-			throw new \InvalidArgumentException('E-mail incorreto!');
-		}
+    public function setEmail($email)
+    {
+	    if( !filter_var($email, FILTER_VALIDATE_EMAIL) ) {
+	       throw new \InvalidArgumentException('E-mail incorreto!');
+	    }
 
-		$this->email = $email;
-	}
+	    $this->email = $email;
+    }
 
-	public function getLogin()
-	{
-		return $this->login;
-	}
+     /**
+     * Get Login
+     *
+     * @return string
+     */
+    public function getLogin()
+    {
+        return $this->login;
+    }
 
-	public function setLogin($login)
-	{
-		$this->login = $login;
-	}
+    public function setLogin($login)
+    {
+        $this->login = $login;
+    }
 
-	public function getSenha()
-	{
-		return $this->senha;
-	}
+    /**
+     * Get Senha
+     *
+     * @return string
+     */
+    public function getSenha()
+    {
+	    return $this->senha;
+    }
 
-	public function setSenha($senha)
-	{
-		$this->senha = $senha;
-	}
+    public function setSenha($senha)
+    {
+	    $this->senha = $senha;
+    }
 
     /**
      * Get id
