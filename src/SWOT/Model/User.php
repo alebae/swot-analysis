@@ -80,7 +80,7 @@ class User
      */
     public function getLogin()
     {
-        return $this->login;
+       return $this->login;
     }
 
     public function setLogin($login)
@@ -95,12 +95,12 @@ class User
      */
     public function getSenha()
     {
-	    return $this->senha;
+       return $this->senha;
     }
 
     public function setSenha($senha)
     {
-	    $this->senha = $senha;
+       $this->senha = $senha;
     }
 
     /**
