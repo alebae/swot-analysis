@@ -1,4 +1,5 @@
 <?php
+
 namespace SWOT\Model;
 use Doctrine\ORM\Mapping as ORM;
 /**
@@ -46,12 +47,12 @@ class User
      */
     public function getNome()
     {
-	    return $this->nome;
+        return $this->nome;
     }
 
     public function setNome($nome)
     {
-	    $this->nome = $nome;
+        $this->nome = $nome;
     }
 
      /**
@@ -61,16 +62,16 @@ class User
      */
     public function getEmail()
     {
-	    return $this->email;
+        return $this->email;
     }
 
     public function setEmail($email)
     {
-	    if( !filter_var($email, FILTER_VALIDATE_EMAIL) ) {
-	       throw new \InvalidArgumentException('E-mail incorreto!');
-	    }
+        if( !filter_var($email, FILTER_VALIDATE_EMAIL) ) {
+            throw new \InvalidArgumentException('E-mail incorreto!');
+        }
 
-	    $this->email = $email;
+        $this->email = $email;
     }
 
      /**
